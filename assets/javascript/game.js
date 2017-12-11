@@ -104,11 +104,11 @@ function endGame(){
 			screenUpdate();
 			$(".question").empty();
 			$(".btn").remove();
-			$(".question").html('<br><img src="assets/images/joffrey_clapping.gif">');
 			let startOverBtn =  $("<btn>");
 			startOverBtn.addClass("startOver btn");
 			startOverBtn.text("Start Over");
-			$(".question").html("Do you want to try once more?");
+			$(".question").html("Game over!<br>Do you want to try once more?");
+			$(".question").append('<br><br><img src="assets/images/joffrey_clapping.gif">');
 			$(".row1").append(startOverBtn);
 			
 			$(".startOver").click(function(){
@@ -142,7 +142,7 @@ function startGame(questions, index)
 	{
 
 		var createBtns = $("<button>");
-		createBtns.addClass("btn choice btn-choice");
+		createBtns.addClass("btn choice btn-choice btn-group");
 		createBtns.attr("value", currentQuestion.answers[i]);
 		createBtns.text(currentQuestion.answers[i]);
 		$(".question").after(createBtns);
@@ -181,7 +181,7 @@ function startGame(questions, index)
 			screenUpdate();
 			$(".question").empty();
 			$(".btn").remove();
-			$(".question").html("No! <br>"  + "<br> Of course it is "
+			$(".question").html("No!"  + "<br> Of course it is "
 			 + currentQuestion.rightAnswer + "<br>"
 			 + currentQuestion.rightAnswerGif);
 

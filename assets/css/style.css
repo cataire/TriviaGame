@@ -7,8 +7,9 @@
 
 .btn-choice {
 
-	width: 350px;
+	
 	background-color: #d3d3d3;
+	min-width: 250px;
 	margin: 10px auto;
 	display: block;
 }
@@ -31,7 +32,7 @@
 
 .correctIncorrect, .timer {
 
-	margin: 30px;
+	margin: 10px;
 	font-size: 20px;
 	font-weight: bold;
 	color: white;

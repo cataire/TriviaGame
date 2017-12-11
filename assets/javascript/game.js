@@ -22,31 +22,33 @@ GOTtheme: new Audio("assets/sounds/GOTTheme.mp3"),
 
 
 var question1 = {
-question: 'What "donat" means in Dothraki language?',
-answers: ["And eat your horse", "Round sweet pastry", "I want to kill you", "To shout"],
-rightAnswer: "To shout",
-questionGif: '<br><br><img src="assets/images/khal_drogo2.gif">',
-rightAnswerGif: '<br><br><img src="assets/images/khal_naked.gif">',
-wrongAnswerGif: '<br><br><img src="assets/images/khal_naked.gif>',
-
-};
-
-var question2 = {
 question: "What does everybody call the leader of white walkers?" ,
 answers: ["Mr President", "The chief", "Night King", "Ugly face"],
 rightAnswer: "Night King",
-questionGif: '<br><br><img src="assets/images/white-walker.gif">',
-rightAnswerGif: '<br><br><img src="assets/images/night_king.gif">',
-wrongAnswerGif: '<br><br><img src="assets/images/night_king.gif1">',
+questionGif: '<br><img src="assets/images/white-walker.gif">',
+rightAnswerGif: '<br><img src="assets/images/night_king.gif">',
+wrongAnswerGif: '<br><img src="assets/images/night_king.gif1">',
 };
+
+var question2 = {
+question: 'What "donat" means in Dothraki language?',
+answers: ["And eat your horse", "Round sweet pastry", "I want to kill you", "To shout"],
+rightAnswer: "To shout",
+questionGif: '<br><img src="assets/images/khal_drogo2.gif">',
+rightAnswerGif: '<br><img src="assets/images/khal.gif">',
+wrongAnswerGif: '<br><img src="assets/images/khal.gif>',
+
+};
+
+
 
 var question3 = {
 question: "What killed Joffrey Baratheon?",
 answers: ["His love to people", "Poison", "He ate too much", "Old age"],
 rightAnswer: "Poison",
-questionGif: '<br><br><img src="assets/images/joffrey_poisoned.gif">',
-rightAnswerGif: '<br><br><img src="assets/images/joffrey_dying.gif">',
-wrongAnswerGif: '<br><br><img src="assets/images/joffrey_clapping.gif>',
+questionGif: '<br><img src="assets/images/joffrey_poisoned.gif">',
+rightAnswerGif: '<br><img src="assets/images/joffrey_dying.gif">',
+wrongAnswerGif: '<br><img src="assets/images/joffrey_clapping.gif>',
 
 };
 
@@ -54,9 +56,9 @@ var question4 = {
 question: "How old was Daenerys when she married Khal Drogo?",
 answers: ["21", "18", "13", "Too young"],
 rightAnswer: "13",
-questionGif: '<br><br><img src="assets/images/khal_daenerys.gif">',
-rightAnswerGif: '<br><br><img src="assets/images/daenerys_wed.gif">',
-wrongAnswerGif: '<br><br><img src="assets/images/daenerys_wed.gif>',
+questionGif: '<br><img src="assets/images/khal_daenerys.gif">',
+rightAnswerGif: '<br><img src="assets/images/daenerys_wed.gif">',
+wrongAnswerGif: '<br><img src="assets/images/daenerys_wed.gif>',
 
 };
 
@@ -64,9 +66,9 @@ var question5 = {
 question: 'Why Daenerys is called "Mother of Dragons?"',
 answers: ["She is really a dragon", "She found three little dragons", "She just made up this name to be cool", "She went into the fire with three dragon eggs"],
 rightAnswer: "She went into the fire with three dragon eggs",
-questionGif: '<br><br><img src="assets/images/my_dragons.gif">',
-rightAnswerGif: '<br><br><img src="assets/images/daenerys_dragons.gif">',
-wrongAnswerGif: '<br><br><img src="assets/images/daenerys_fire.gif>',
+questionGif: '<br><<img src="assets/images/my_dragons.gif">',
+rightAnswerGif: '<br><img src="assets/images/daenerys_dragons.gif">',
+wrongAnswerGif: '<br><img src="assets/images/daenerys_fire.gif>',
 
 };
 
@@ -102,7 +104,7 @@ function endGame(){
 			screenUpdate();
 			$(".question").empty();
 			$(".btn").remove();
-			$(".question").html('<br><img src="assets/images/joffrey_clapping.gif">)';
+			$(".question").html('<br><img src="assets/images/joffrey_clapping.gif">');
 			let startOverBtn =  $("<btn>");
 			startOverBtn.addClass("startOver btn");
 			startOverBtn.text("Start Over");
@@ -140,7 +142,7 @@ function startGame(questions, index)
 	{
 
 		var createBtns = $("<button>");
-		createBtns.addClass("btn choice");
+		createBtns.addClass("btn choice btn-choice");
 		createBtns.attr("value", currentQuestion.answers[i]);
 		createBtns.text(currentQuestion.answers[i]);
 		$(".question").after(createBtns);
@@ -231,7 +233,7 @@ function timeIsUp() {
 		endGame();
 	};
 
-	}, 8000);
+	}, 6000);
 
 	
 	

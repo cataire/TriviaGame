@@ -1,8 +1,15 @@
 .btn {
 
 	width: 350px;
-	margin: 20px;
 	background-color: #d3d3d3;
+	margin: 0 auto;
+}
+
+.btn-choice {
+
+	width: 350px;
+	background-color: #d3d3d3;
+	margin: 10px auto;
 	display: block;
 }
 
@@ -15,7 +22,7 @@
 .question {
 
 	min-height: 200px;
-	margin: 30px;
+	margin: 30px auto;
 	font-weight: bold;
 	font-size: 30px;
 	color: white;

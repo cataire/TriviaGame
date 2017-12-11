@@ -7,7 +7,7 @@ var getValue;
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
-var seconds = 60;
+var seconds = 30;
 var interval;
 var currentQuestion;
 var currentIndex = 0;
@@ -25,7 +25,7 @@ var question1 = {
 question: "What does everybody call the leader of white walkers?" ,
 answers: ["Mr President", "The chief", "Night King", "Ugly face"],
 rightAnswer: "Night King",
-questionGif: '<br><img src="assets/images/white-walker.gif">',
+questionGif: '<br><br><img src="assets/images/white-walker.gif">',
 rightAnswerGif: '<br><img src="assets/images/night_king.gif">',
 wrongAnswerGif: '<br><img src="assets/images/night_king.gif1">',
 };
@@ -127,7 +127,7 @@ function startGame(questions, index)
 
 {
 	console.log(index);
-	seconds = 60;
+	seconds = 30;
 	$(".row1").empty();
 	runTimer();
 
@@ -194,7 +194,7 @@ function startGame(questions, index)
 			if (index < questions.length-1) {
 
 				timerStop()
-				seconds = 60;
+				seconds = 30;
 				startGame(questions, ++index);
 			}
 
@@ -224,7 +224,7 @@ function timeIsUp() {
 	screenUpdate();
 	$(".question").empty();
 	$(".btn").remove();
-	$(".question").html("Time is up! Try to just guess next time! ");
+	$(".question").html("Time is up! Try to just guess next time! <br> The right answer is: " + currentQuestion.rightAnswer);
 
 	setTimeout(function(){
 	startGame(questionsArray, currentIndex);
